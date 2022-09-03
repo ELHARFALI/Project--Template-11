@@ -21,6 +21,13 @@
             &:hover {
                 transform: translateY(-10px);
                 box-shadow: 0 2px 15px rgba(0,0,0, 0.2);
+
+                .info {
+
+                    i {
+                        animation: moving-arrow 0.6s linear infinite;
+                    }
+                }
             }
 
             img {
@@ -28,30 +35,45 @@
             }
 
             .content {
+                padding: 20px;
     
                 h3 {
-    
-    
+                    margin: 0;
                 }
     
                 p {
-    
-    
+                    margin: 10px 0 0;
+                    line-height: 1.5;
+                    color: #777;
                 }
     
             }
 
             .info {
+                padding: 20px;
+                border-top: 1px solid #e6e6e7;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
                 a {
-
+                    color: $main-color;
+                    font-weight: bold;
                 }
 
                 i {
-
+                    color: $main-color;
                 }
             }
+
+            
         }
 
+    }
+}
+
+@keyframes moving-arrow {
+    100% {
+        transform: translateX(10px);
     }
 }
